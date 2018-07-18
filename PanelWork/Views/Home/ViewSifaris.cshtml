@@ -1,0 +1,53 @@
+﻿@model PanelWork.ViewModel.Mymodel
+@{
+    ViewBag.Title = "ViewSifaris";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Sifarişlər</h2>
+
+
+<div class="container">
+    <div class="col-md-12">
+        <a class="bolguler" href="~/SifarisBolgusu/IndexYeni/@Model._sifarisler[0].sifaris_novu_id"> Yeni</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexCavabVer/@Model._sifarisler[0].sifaris_novu_id">Cavab Verilməyən</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexErtele/@Model._sifarisler[0].sifaris_novu_id">Sonraya Saxlananlar</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexTecili/@Model._sifarisler[0].sifaris_novu_id"> Təcili</a>
+        <a class="bolguler" href="~/SifarisBolgusu/Indexİmt/@Model._sifarisler[0].sifaris_novu_id"> İmtina Edilənlər</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexTestiq/@Model._sifarisler[0].sifaris_novu_id"> Təsdiqlənənlər</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexErr/@Model._sifarisler[0].sifaris_novu_id"> Şikayət Olunanlar </a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexFake/@Model._sifarisler[0].sifaris_novu_id"> Fake sifarişlər</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexTekrar/@Model._sifarisler[0].sifaris_novu_id"> Təkrarlar</a>
+        <a class="bolguler" href="~/SifarisBolgusu/IndexSilindi/@Model._sifarisler[0].sifaris_novu_id"> Silinənlər</a>
+    </div>
+
+
+
+    @*<a href="@Url.Action("Exported" , "HomePanel")">Export Pdf</a>*@
+
+
+</div>
+<style>
+    .bolguler {
+        margin: 2px 11px;
+        padding: 4px;
+        display: inherit;
+        margin-bottom: 21px;
+        text-align: center;
+        color: #003ae4;
+        font-size: 26px;
+        letter-spacing: 2px;
+        font-style: italic;
+        font-family: sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        text-shadow: -2px 1px 11px #656565;
+        box-shadow: 2px 2px 20px #547ea9;
+        transition: all 0.4s linear;
+    }
+
+        .bolguler:hover {
+            color: #b30000;
+            text-decoration: none;
+        }
+</style>

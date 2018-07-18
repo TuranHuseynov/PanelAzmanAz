@@ -1,0 +1,45 @@
+﻿@model PanelWork.ViewModel.Mymodel
+@{
+    ViewBag.Title = "IndexErr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Sifariş Sayı : @Model._sifarisler.Where(s => s.sifaris_novu_id == 9).Count()</h2>
+
+<div class="container text-center">
+    <h2>Yeni sifarisler</h2>
+    <p></p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>AD,SOYAD</th>
+                <th>TELEFON</th>
+                <th>MEHSUL</th>
+                <th>UNVAN</th>
+                <th>TARİX</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model._sifarisler)
+            {
+                <tr>
+                    <td>@item.sifaris_id</td>
+                    <td>@item.sifarisci_ad_soyad</td>
+                    <td>@item.sifarisci_telefon</td>
+                    <td>@item.sifarisci_unvani</td>
+                    <td>@item.sifaris_mehsul_adi</td>
+                    <td>@item.sifaris_tarixi</td>
+
+                    <td>
+                        <a href="~/Home/Edit/@item.sifaris_id" class="btn btn-primary">Düzəlt</a>
+                    </td>
+
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+

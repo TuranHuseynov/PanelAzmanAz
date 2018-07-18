@@ -1,0 +1,83 @@
+﻿@model PanelWork.Models.Istifadeci
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Istifadeci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_job_begin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_job_begin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.rol_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.rol_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.user_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

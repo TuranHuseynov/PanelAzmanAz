@@ -1,0 +1,229 @@
+﻿@model PanelWork.Models.Sifari
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section id="forma">
+        <div class=" container">
+            <div class="row">
+                
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.sifaris_id)
+
+                <div class="col-md-6">
+
+
+                    <div class="form-group">
+                        <h4>Ad,Soyad</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifarisci_ad_soyad, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sifarisci_ad_soyad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <h4>Unvan</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifaris_mehsul_adi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sifaris_mehsul_adi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <h4>Mehsul</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifarisci_unvani, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sifarisci_unvani, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>Tarix</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifaris_tarixi, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                            @Html.ValidationMessageFor(model => model.sifaris_tarixi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4>Telefon</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifarisci_telefon, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sifarisci_telefon, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>Sifaris novu</h4>
+                        <div class="col-md-10">
+                            @Html.DropDownList("sifaris_novu_id", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.sifaris_novu_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <h4>Sifarisi goturen</h4>
+                        <div class="col-md-10">
+                            @Html.DropDownList("sifaris_goturen_id", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.sifaris_goturen_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h4>Erteleme tarix</h4>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sifaris_erteleme_tarix, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                            @Html.ValidationMessageFor(model => model.sifaris_erteleme_tarix, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Saxla" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+<div>
+    @Html.ActionLink("Geri", "Index")
+</div>
+
+<style>
+    h4 {
+        font-size: 1.3rem;
+        position: relative;
+        left: 27px;
+    }
+</style>
+
+
+
+
+@*<div class="form-horizontal">
+    <h3 class="text-center">Sifarişlər</h3>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.sifaris_id)
+
+
+    <div class="form-group">
+        <h4>Mehsul</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifarisci_unvani, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifarisci_unvani, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <h4>Unvan</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifaris_mehsul_adi, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifaris_mehsul_adi, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h4>Sifaris novu</h4>
+        <div class="col-md-10">
+            @Html.DropDownList("sifaris_novu_id", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.sifaris_novu_id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h4>Erteleme tarix</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifaris_erteleme_tarix, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+            @Html.ValidationMessageFor(model => model.sifaris_erteleme_tarix, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <h4>Sifarisi goturen</h4>
+        <div class="col-md-10">
+            @Html.DropDownList("sifaris_goturen_id", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.sifaris_goturen_id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h4>Say</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifaris_sayi, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifaris_sayi, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <h4>Ad,Soyad</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifarisci_ad_soyad, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifarisci_ad_soyad, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h4>Telefon</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifarisci_telefon, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifarisci_telefon, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            <h4>Mehsul</h4>
+            <div class="col-md-10">
+                @Html.DropDownList("sifarisci_mehsulun_id", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.sifarisci_mehsulun_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+    <div class="form-group">
+        <h4>Tarix</h4>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.sifaris_tarixi, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.sifaris_tarixi, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group">
+            <h4>Mehsul</h4>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sifaris_mehsul_adi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.sifaris_mehsul_adi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+</div>*@

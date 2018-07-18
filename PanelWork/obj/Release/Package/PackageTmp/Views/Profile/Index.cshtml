@@ -1,0 +1,49 @@
+﻿@model PanelWork.ViewModel.Mymodel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Profil</h2>
+<section id="profil">
+    <div class="container">
+        @foreach (var item in Model._istifadeciler)
+        {
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/MyUpload/@item.user_img" style="width: 202px;
+    height: 187px;
+    border: 1px solid gray;
+    border-radius: 94px;
+    position: relative;
+    left: 40px;" />
+                </div>
+                <div class="col-md-4">
+
+                    <h2> @item.user_name @item.user_surname</h2>
+                    <h4>
+                        @item.Rol.rol_name
+                    </h4>
+
+
+                </div>
+                <div class="col-md-4">
+                    <h3> Başladı :<br /> @item.user_job_begin</h3>
+
+
+                    <h3> Maaş :   @item.user_salary Azn  </h3>
+                    <h3>
+                        Email :
+                        @item.user_email
+                    </h3>
+                </div>
+            </div>
+
+        }
+
+    </div>
+
+
+
+</section>

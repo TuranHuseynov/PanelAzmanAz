@@ -1,0 +1,51 @@
+﻿@model PanelWork.Models.Mehsul
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mehsul</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mehsulun_adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mehsulun_adi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mehsulun_linki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mehsulun_linki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mehsulun_sekli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mehsulun_sekli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mehsul_qiymeti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mehsul_qiymeti)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.mehsul_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

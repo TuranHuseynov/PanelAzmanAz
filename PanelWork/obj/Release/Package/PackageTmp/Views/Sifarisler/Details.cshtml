@@ -1,0 +1,99 @@
+﻿@model PanelWork.Models.Sifari
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Ətraflı baxış</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ad,Soyad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifarisci_ad_soyad)
+        </dd>
+
+        <dt>
+            Telefon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifarisci_telefon)
+        </dd>
+        <dt>
+            Sifaris novu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SifarisNovu.sifaris_type)
+        </dd>
+        <dt>
+            Mehsul
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifarisci_unvani)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.sifaris_tarixi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifaris_tarixi)
+        </dd>*@
+
+        <dt>
+            Say
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifaris_sayi)
+        </dd>
+
+        <dt>
+            Erteleme tarixi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifaris_erteleme_tarix)
+        </dd>
+
+        <dt>
+           Unvan
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sifaris_mehsul_adi)
+        </dd>
+
+        <dt>
+            Qebul eden
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Istifadeci.user_name)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Mehsul.mehsulun_adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mehsul.mehsulun_adi)
+        </dd>*@
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Duzelt", "Edit", new { id = Model.sifaris_id }) |
+    @Html.ActionLink("Geri", "Index")
+</p>

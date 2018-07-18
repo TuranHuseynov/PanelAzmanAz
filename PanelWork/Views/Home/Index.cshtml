@@ -1,0 +1,66 @@
+﻿@model PanelWork.ViewModel.Mymodel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-left">Sifariş sayı : @Model._sifarisler.Count()</h2>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>İD</th>
+                <th>AD SOYAD</th>
+                <th>TELEFON</th>
+
+                <th>MƏHSUL</th>
+                <th>ÜNVAN</th>
+                <th>TARİX</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model._sifarisler)
+            {
+
+
+                <tr>
+                    <td>@item.sifaris_id</td>
+                    <td>@item.sifarisci_ad_soyad</td>
+                    <td>@item.sifarisci_telefon</td>
+                    <td>@item.sifarisci_unvani</td>
+                    <td>@item.sifaris_mehsul_adi</td>
+                    <td>@item.sifaris_tarixi</td>
+
+
+
+
+
+                </tr>
+
+
+                @*<a href="~/AdminArea/Sifariler/Imday/@item.SifarisNovu.sifaris_type_id">imtinaciar</a>
+
+                    <a href="~/AdminArea/Sifariler/Imday/@item.sifaris_novu_id">sikayet</a>*@
+
+
+            }
+
+
+        </tbody>
+
+
+    </table>
+
+    <a href="@Url.Action("Exported" , "Home")">PDF cixar</a>
+    @*<h2 class="text-right">Sifariş sayı : @Model._sifarisler.Count()</h2>*@
+</div>
+
+<style>
+    .table td, .table th {
+        padding: .69rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+</style>
