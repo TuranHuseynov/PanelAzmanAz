@@ -48,7 +48,7 @@ namespace PanelWork.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "mehsul_id,mehsulun_adi,mehsulun_linki,mehsul_qiymeti")] Mehsul mehsul, HttpPostedFileBase mehsulun_sekli)
+        public ActionResult Create([Bind(Include = "mehsul_id,mehsulun_adi,mehsulun_linki,mehsul_qiymeti,mehsul_price")] Mehsul mehsul, HttpPostedFileBase mehsulun_sekli)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace PanelWork.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "mehsul_id,mehsulun_adi,mehsulun_linki,mehsulun_sekli,mehsul_qiymeti")] Mehsul mehsul)
+        public ActionResult Edit([Bind(Include = "mehsul_id,mehsulun_adi,mehsulun_linki,mehsulun_sekli,mehsul_qiymeti,mehsul_price")] Mehsul mehsul)
         {
             if (ModelState.IsValid)
             {

@@ -19,6 +19,7 @@
     <EntitySetMapping Name="Mehsuls">
       <EntityTypeMapping TypeName="DB_A3E145_azmanazModel.Mehsul">
         <MappingFragment StoreEntitySet="Mehsul">
+          <ScalarProperty Name="mehsul_price" ColumnName="mehsul_price" />
           <ScalarProperty Name="mehsul_id" ColumnName="mehsul_id" />
           <ScalarProperty Name="mehsulun_adi" ColumnName="mehsulun_adi" />
           <ScalarProperty Name="mehsulun_linki" ColumnName="mehsulun_linki" />
@@ -38,6 +39,7 @@
     <EntitySetMapping Name="Sifaris">
       <EntityTypeMapping TypeName="DB_A3E145_azmanazModel.Sifari">
         <MappingFragment StoreEntitySet="Sifaris">
+          <ScalarProperty Name="sifaris_qeyd" ColumnName="sifaris_qeyd" />
           <ScalarProperty Name="sifaris_id" ColumnName="sifaris_id" />
           <ScalarProperty Name="sifarisci_ad_soyad" ColumnName="sifarisci_ad_soyad" />
           <ScalarProperty Name="sifarisci_telefon" ColumnName="sifarisci_telefon" />

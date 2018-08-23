@@ -1,0 +1,35 @@
+﻿@model PanelWork.ViewModel.Mymodel
+
+    @foreach (var item in Model._sifarisler)
+    {
+
+        <tr>
+            <td scope="row">@item.sifaris_id</td>
+
+            <td>
+                <a class="xett" data-toggle="tooltip" title="@item.sifaris_qeyd">@item.sifarisci_ad_soyad</a>
+            </td>
+       
+            <td>@item.sifarisci_telefon</td>
+            <td>@item.sifarisci_unvani</td>
+            <td>@item.sifaris_mehsul_adi</td>
+            <td>@item.sifaris_tarixi</td>
+            <td>@item.Mehsul.mehsul_qiymeti Azn</td>
+            <td>@item.SifarisNovu.sifaris_type</td>
+            <td>@item.Istifadeci.user_name</td>
+
+
+
+
+
+        </tr>
+
+    }
+
+    @*<script>
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>*@

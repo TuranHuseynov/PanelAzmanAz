@@ -26,6 +26,7 @@
     <Property Name="mehsulun_sekli" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="mehsul_qiymeti" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Sifaris" Relationship="Self.FK_Sifaris_Mehsul" FromRole="Mehsul" ToRole="Sifaris" />
+    <Property Name="mehsul_price" Type="Int32" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -53,6 +54,7 @@
     <NavigationProperty Name="Istifadeci" Relationship="Self.FK_Sifaris_Istifadeci" FromRole="Sifaris" ToRole="Istifadeci" />
     <NavigationProperty Name="Mehsul" Relationship="Self.FK_Sifaris_Mehsul" FromRole="Sifaris" ToRole="Mehsul" />
     <NavigationProperty Name="SifarisNovu" Relationship="Self.FK_Sifaris_SifarisNovu" FromRole="Sifaris" ToRole="SifarisNovu" />
+    <Property Name="sifaris_qeyd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SifarisNovu">
     <Key>

@@ -57,7 +57,7 @@ namespace PanelWork.Controllers
                 if (Path.GetExtension(user_img.FileName) == ".jpg" || Path.GetExtension(user_img.FileName) == ".jpeg")
                 {
                     var file_name = Path.GetFileName(user_img.FileName);
-                    var src = Path.Combine(Server.MapPath("/MyUpload"), file_name);
+                    var src = Path.Combine(Server.MapPath("~/MyUpload"), file_name);
                     user_img.SaveAs(src);
                 }
                 istifadeci.user_img = Path.GetFileName(user_img.FileName);
@@ -91,7 +91,7 @@ namespace PanelWork.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "user_id,user_name,user_surname,user_password,user_img,user_salary,user_job_begin,user_email,user_rol_type")] Istifadeci istifadeci)
+        public ActionResult Edit([Bind(Include = "user_id,user_name,user_surname,user_password,user_salary,user_job_begin,user_img,user_email,user_rol_type")] Istifadeci istifadeci)
         {
             if (ModelState.IsValid)
             {

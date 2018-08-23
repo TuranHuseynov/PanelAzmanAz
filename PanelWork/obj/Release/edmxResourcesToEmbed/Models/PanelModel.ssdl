@@ -23,6 +23,7 @@
     <Property Name="mehsulun_linki" Type="nvarchar" MaxLength="600" />
     <Property Name="mehsulun_sekli" Type="nvarchar(max)" />
     <Property Name="mehsul_qiymeti" Type="nvarchar" MaxLength="100" />
+    <Property Name="mehsul_price" Type="int" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -46,6 +47,7 @@
     <Property Name="sifaris_erteleme_tarix" Type="datetime" />
     <Property Name="sifaris_goturen_id" Type="int" />
     <Property Name="sifaris_mehsul_adi" Type="nvarchar" MaxLength="200" />
+    <Property Name="sifaris_qeyd" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="SifarisNovu">
     <Key>

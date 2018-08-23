@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_A3E145_azmanazModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_A3E145_azmanazModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Istifadeci">
           <Key>
             <PropertyRef Name="user_id" />
@@ -28,6 +28,7 @@
           <Property Name="mehsulun_linki" Type="nvarchar" MaxLength="600" />
           <Property Name="mehsulun_sekli" Type="nvarchar(max)" />
           <Property Name="mehsul_qiymeti" Type="nvarchar" MaxLength="100" />
+          <Property Name="mehsul_price" Type="int" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -51,6 +52,7 @@
           <Property Name="sifaris_erteleme_tarix" Type="datetime" />
           <Property Name="sifaris_goturen_id" Type="int" />
           <Property Name="sifaris_mehsul_adi" Type="nvarchar" MaxLength="200" />
+          <Property Name="sifaris_qeyd" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="SifarisNovu">
           <Key>
@@ -130,8 +132,7 @@
             <End Role="Sifaris" EntitySet="Sifaris" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_A3E145_azmanazModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -161,6 +162,7 @@
           <Property Name="mehsulun_sekli" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="mehsul_qiymeti" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Sifaris" Relationship="Self.FK_Sifaris_Mehsul" FromRole="Mehsul" ToRole="Sifaris" />
+          <Property Name="mehsul_price" Type="Int32" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -188,6 +190,7 @@
           <NavigationProperty Name="Istifadeci" Relationship="Self.FK_Sifaris_Istifadeci" FromRole="Sifaris" ToRole="Istifadeci" />
           <NavigationProperty Name="Mehsul" Relationship="Self.FK_Sifaris_Mehsul" FromRole="Sifaris" ToRole="Mehsul" />
           <NavigationProperty Name="SifarisNovu" Relationship="Self.FK_Sifaris_SifarisNovu" FromRole="Sifaris" ToRole="SifarisNovu" />
+          <Property Name="sifaris_qeyd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SifarisNovu">
           <Key>
@@ -292,6 +295,7 @@
           <EntitySetMapping Name="Mehsuls">
             <EntityTypeMapping TypeName="DB_A3E145_azmanazModel.Mehsul">
               <MappingFragment StoreEntitySet="Mehsul">
+                <ScalarProperty Name="mehsul_price" ColumnName="mehsul_price" />
                 <ScalarProperty Name="mehsul_id" ColumnName="mehsul_id" />
                 <ScalarProperty Name="mehsulun_adi" ColumnName="mehsulun_adi" />
                 <ScalarProperty Name="mehsulun_linki" ColumnName="mehsulun_linki" />
@@ -311,6 +315,7 @@
           <EntitySetMapping Name="Sifaris">
             <EntityTypeMapping TypeName="DB_A3E145_azmanazModel.Sifari">
               <MappingFragment StoreEntitySet="Sifaris">
+                <ScalarProperty Name="sifaris_qeyd" ColumnName="sifaris_qeyd" />
                 <ScalarProperty Name="sifaris_id" ColumnName="sifaris_id" />
                 <ScalarProperty Name="sifarisci_ad_soyad" ColumnName="sifarisci_ad_soyad" />
                 <ScalarProperty Name="sifarisci_telefon" ColumnName="sifarisci_telefon" />

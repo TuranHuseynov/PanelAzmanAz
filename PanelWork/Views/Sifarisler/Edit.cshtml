@@ -29,7 +29,7 @@
 
 
                     <div class="form-group">
-                        <h4>Unvan</h4>
+                        <h4>Ünvan</h4>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.sifaris_mehsul_adi, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.sifaris_mehsul_adi, "", new { @class = "text-danger" })
@@ -37,10 +37,8 @@
                     </div>
 
 
-
-
                     <div class="form-group">
-                        <h4>Mehsul</h4>
+                        <h4>Məhsul</h4>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.sifarisci_unvani, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.sifarisci_unvani, "", new { @class = "text-danger" })
@@ -55,6 +53,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <h4>Qeyd</h4>
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.sifaris_qeyd, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.sifaris_qeyd, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-md-6">
@@ -67,7 +72,7 @@
                     </div>
 
                     <div class="form-group">
-                        <h4>Sifaris novu</h4>
+                        <h4>Sifariş növü</h4>
                         <div class="col-md-10">
                             @Html.DropDownList("sifaris_novu_id", null, htmlAttributes: new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.sifaris_novu_id, "", new { @class = "text-danger" })
@@ -76,7 +81,7 @@
 
 
                     <div class="form-group">
-                        <h4>Sifarisi goturen</h4>
+                        <h4>Sifarişi götürən</h4>
                         <div class="col-md-10">
                             @Html.DropDownList("sifaris_goturen_id", null, htmlAttributes: new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.sifaris_goturen_id, "", new { @class = "text-danger" })
@@ -84,12 +89,13 @@
                     </div>
 
                     <div class="form-group">
-                        <h4>Erteleme tarix</h4>
+                        <h4>Ertələmə tarixi</h4>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.sifaris_erteleme_tarix, new { htmlAttributes = new { @class = "form-control", type = "date" } })
                             @Html.ValidationMessageFor(model => model.sifaris_erteleme_tarix, "", new { @class = "text-danger" })
                         </div>
                     </div>
+
 
 
 

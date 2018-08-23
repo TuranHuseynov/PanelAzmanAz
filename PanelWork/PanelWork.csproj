@@ -250,6 +250,12 @@
       <DependentUpon>PanelModel.edmx</DependentUpon>
       <LastGenOutput>PanelModel.cs</LastGenOutput>
     </Content>
+    <Content Include="MyUpload\18238132_1684034811901074_5679194996975359480_o.jpg" />
+    <Content Include="MyUpload\1897966_246785055506247_2061557988_n.jpg" />
+    <Content Include="MyUpload\35893194_2004049869666441_3379412252837806080_n.jpg" />
+    <Content Include="MyUpload\37627929_915219155329497_2317095905133592576_n.jpg" />
+    <Content Include="MyUpload\37684803_915219148662831_1111507157901115392_n.jpg" />
+    <Content Include="MyUpload\39056441_1784943108280294_5150104222460542976_n.jpg" />
     <Content Include="MyUpload\78cc836315968804d25b5a51b14bee0d.jpg" />
     <Content Include="MyUpload\certificate__image.jpg" />
     <Content Include="MyUpload\derman.jpg" />
@@ -257,6 +263,7 @@
     <Content Include="MyUpload\nurs-tuy-dokucu-azaltici-sprey-3lu-ekonomik-set__1405526935709158.jpg" />
     <Content Include="MyUpload\offer_bottom_bg.jpg" />
     <Content Include="MyUpload\orxanadmin.jpg" />
+    <Content Include="MyUpload\pexels-photo-356040.jpeg" />
     <Content Include="MyUpload\prod.png" />
     <Content Include="MyUpload\product.png" />
     <Content Include="MyUpload\Receptionist-Job-1.jpg" />
@@ -406,6 +413,16 @@
     <Content Include="Views\SifarisBolgusu\IndexYeni.cshtml" />
     <Content Include="Views\SifarisBolgusu\IndexCavabVer.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Sifarisler\IndexErr.cshtml" />
+    <Content Include="Views\Sifarisler\IndexTecili.cshtml" />
+    <Content Include="Views\Sifarisler\IndexCavabverilmeyen.cshtml" />
+    <Content Include="Views\Sifarisler\IndexImtina.cshtml" />
+    <Content Include="Views\Sifarisler\IndexSonraya.cshtml" />
+    <Content Include="Views\Sifarisler\IndexTestiq.cshtml" />
+    <Content Include="Views\Sifarisler\IndexFake.cshtml" />
+    <Content Include="Views\Sifarisler\IndexTekrar.cshtml" />
+    <Content Include="Views\Sifarisler\IndexSilinen.cshtml" />
+    <Content Include="Views\Shared\_FilterPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

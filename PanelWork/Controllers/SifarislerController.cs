@@ -16,13 +16,281 @@ namespace PanelWork.Controllers
         private DB_A3E145_azmanazEntities db = new DB_A3E145_azmanazEntities();
 
         // GET: Sifarisler
+
+        //YENILER
         public ActionResult Index()
         {
             var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
-            return View(sifaris.ToList());
+            return View(sifaris.Where(s=>s.sifaris_novu_id==9 || s.sifaris_erteleme_tarix == DateTime.Now).ToList());
+        }
+        [HttpPost]
+        public ActionResult IndexDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return Content("Silindi");
         }
 
-        // GET: Sifarisler/Details/5
+
+        //ŞİKAYƏY OLUNAN
+
+        public ActionResult IndexErr()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 2).ToList());
+        }
+
+        [HttpPost]
+        public ActionResult IndexErrDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexErr");
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //TƏCİLİ
+
+        public ActionResult IndexTecili()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 8).ToList());
+        }
+
+        [HttpPost]
+        public ActionResult IndexTeciliDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexTecili");
+        }
+
+
+
+
+
+        //CAVAB VERILMEYEN
+
+
+        public ActionResult IndexCavabverilmeyen()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 10).ToList());
+
+        }
+        [HttpPost]
+        public ActionResult IndexCavabverilmeyenDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexCavabverilmeyen");
+
+        }
+
+
+
+        //İMTİNA EDİLƏN
+        public ActionResult IndexImtina()
+        {
+           
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 1).ToList());
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexImtinaDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexImtina");
+        }
+
+
+
+        //SONRAYA SAXLANILAN
+
+        public ActionResult IndexSonraya()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+
+            return View(sifaris.Where(s => s.sifaris_novu_id == 3).ToList());
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexSonrayaDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+            return RedirectToAction("IndexSonraya");
+        }
+
+
+
+
+
+        //FAKE
+
+        public ActionResult IndexFake()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 5).ToList());
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexFakeDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+
+            return RedirectToAction("IndexFake");
+
+        }
+
+
+        //TƏSTİQ
+        public ActionResult IndexTestiq()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 4).ToList());
+
+            
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexTestiqDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexTestiq");
+
+
+
+        }
+
+
+
+
+        //TEKRAR
+
+        public ActionResult IndexTekrar()
+        {
+            
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 6).ToList());
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexTekrarDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexTekrar");
+
+        }
+
+
+
+
+        //SiLiNəN
+
+        public ActionResult IndexSilinen()
+        {
+            var sifaris = db.Sifaris.Include(s => s.Istifadeci).Include(s => s.Mehsul).Include(s => s.SifarisNovu);
+            return View(sifaris.Where(s => s.sifaris_novu_id == 7).ToList());
+
+        }
+
+        [HttpPost]
+        public ActionResult IndexSilinenDelete(FormCollection formcol)
+        {
+            string[] ids = formcol["productId"].Split(new char[] { ',' });
+            foreach (string id in ids)
+            {
+                var product = this.db.Sifaris.Find(int.Parse(id));
+                this.db.Sifaris.Remove(product);
+                this.db.SaveChanges();
+            }
+
+            return RedirectToAction("IndexSilinen");
+
+        }
+
+
+
+
+
+
+
+
+
+        // GET: Sifarisler/Details/
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -51,7 +319,7 @@ namespace PanelWork.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "sifaris_id,sifarisci_ad_soyad,sifarisci_telefon,sifarisci_mehsulun_id,sifarisci_unvani,sifaris_tarixi,sifaris_sayi,sifaris_novu_id,sifaris_erteleme_tarix,sifaris_goturen_id,sifaris_mehsul_adi")] Sifari sifari)
+        public ActionResult Create([Bind(Include = "sifaris_id,sifarisci_ad_soyad,sifarisci_telefon,sifarisci_mehsulun_id,sifarisci_unvani,sifaris_tarixi,sifaris_sayi,sifaris_novu_id,sifaris_erteleme_tarix,sifaris_goturen_id,sifaris_mehsul_adi,sifaris_qeyd")] Sifari sifari)
         {
             if (ModelState.IsValid)
             {
@@ -91,10 +359,12 @@ namespace PanelWork.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "sifaris_id,sifarisci_ad_soyad,sifarisci_telefon,sifarisci_mehsulun_id,sifarisci_unvani,sifaris_tarixi,sifaris_sayi,sifaris_novu_id,sifaris_erteleme_tarix,sifaris_goturen_id,sifaris_mehsul_adi")] Sifari sifari)
+        public ActionResult Edit([Bind(Include = "sifaris_id,sifarisci_ad_soyad,sifarisci_telefon,sifarisci_mehsulun_id,sifarisci_unvani,sifaris_tarixi,sifaris_sayi,sifaris_novu_id,sifaris_erteleme_tarix,sifaris_goturen_id,sifaris_mehsul_adi,sifaris_qeyd")] Sifari sifari)
         {
             if (ModelState.IsValid)
             {
+                var tarix = DateTime.Now;
+                sifari.sifaris_tarixi = tarix;
                 db.Entry(sifari).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

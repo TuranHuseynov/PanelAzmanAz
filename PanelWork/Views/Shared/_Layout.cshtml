@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin - Start Bootstrap Template</title>
+    <title>AzManAz </title>
     <!-- Bootstrap core CSS-->
     <link href="~/AdminPanel/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
@@ -27,9 +27,7 @@
     @if (Session["id"] == null)
     {
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top" id="mainNav">
-            <a class="navbar-brand" href="/AdminArea/HomePanel/Index" style="    font-style: oblique;
-    font-family: cursive;
-    letter-spacing: 5px;
+            <a class="navbar-brand" href="/AdminArea/HomePanel/Index" style="letter-spacing: 5px;
     text-shadow: 2px 2px 12px white;">AzManAz</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,7 +61,7 @@
     font-family: monospace;
     letter-spacing: 10px;
     color: white;
-    text-shadow: 2px 2px 16px #15a9e8;">
+    text-shadow: 2px 2px 16px #f30000;">
                             Xoş gəlmisiniz
                         </h3>
                     </li>
@@ -83,7 +81,7 @@
     {
         <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="mainNav">
             <a class="navbar-brand" href="/Home/Index" style="    font-style: oblique;
-    font-family: cursive;
+   
     letter-spacing: 5px;
     text-shadow: 2px 2px 12px white;">AzManAz</a>
 
@@ -113,26 +111,32 @@
                         </a>
 
                     </li>
-                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                            <i class="fa fa-fw fa-wrench"></i>
+                    @*<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                <i class="fa fa-fw fa-wrench"></i>
+                <span class="nav-link-text">Sifarisler</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseComponents">
+
+
+                <li>
+                    <a href="/Home/ViewSifaris">Sifaris Novleri</a>
+                </li>
+
+                <li>
+                    <a href="/Sifarisler/Index">Sifarisler</a>
+                </li>
+
+
+            </ul>
+        </li>*@
+
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                        <a class="nav-link" href="/Home/ViewSifaris">
+                            <i class="fa fa-users" aria-hidden="true"></i>
                             <span class="nav-link-text">Sifarisler</span>
                         </a>
-                        <ul class="sidenav-second-level collapse" id="collapseComponents">
-
-
-                            <li>
-                                <a href="/Home/ViewSifaris">Sifaris Novleri</a>
-                            </li>
-
-                            <li>
-                                <a href="/Sifarisler/Index">Sifarisler</a>
-                            </li>
-
-
-                        </ul>
                     </li>
-
 
                     <li class="nav-item" data-toggle="tooltip" data-placement="right">
                         <a class="nav-link" href="/Istifadeciler/Index">
@@ -142,7 +146,7 @@
                     </li>
 
 
-                   
+
 
 
 
@@ -237,10 +241,12 @@
                                 <a class="dropdown-item small" href="#">View all alerts</a>
                             </div>
                         </li>*@
+
+
                     <li class="nav-item">
                         <form class="form-inline my-2 my-lg-0 mr-lg-2">
                             <div class="input-group">
-                                <input class="form-control" type="text" id="axtaris" placeholder="Axtar...">
+                                <input class="form-control" type="text" id="myInput"  placeholder="Axtar...">
                                 <span class="input-group-append">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fa fa-search"></i>
@@ -272,7 +278,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="mainNav">
             <a class="navbar-brand" href="/Home/Index" style="    font-style: oblique;
-    font-family: cursive;
+
     letter-spacing: 5px;
     text-shadow: 2px 2px 12px white;">AzManAz</a>
 
@@ -302,23 +308,28 @@
                         </a>
 
                     </li>
-                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                            <i class="fa fa-fw fa-wrench"></i>
+                    @*<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                <i class="fa fa-fw fa-wrench"></i>
+                <span class="nav-link-text">Sifarisler</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseComponents">
+
+                <li>
+                    <a href="/Home/ViewSifaris">Sifaris Novleri</a>
+                </li>
+
+                @*<li>
+                    <a href="/Sifarisler/Index">Sifarisler</a>
+                </li>
+            </ul>
+        </li>*@
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                        <a class="nav-link" href="/Home/ViewSifaris">
+                            <i class="fa fa-users" aria-hidden="true"></i>
                             <span class="nav-link-text">Sifarisler</span>
                         </a>
-                        <ul class="sidenav-second-level collapse" id="collapseComponents">
-
-                            <li>
-                                <a href="/Home/ViewSifaris">Sifaris Novleri</a>
-                            </li>
-
-                            <li>
-                                <a href="/SifarislerC/Index">Sifarisler</a>
-                            </li>
-                        </ul>
                     </li>
-
 
 
 
@@ -419,10 +430,11 @@
                                 <a class="dropdown-item small" href="#">View all alerts</a>
                             </div>
                         </li>*@
+
                     <li class="nav-item">
                         <form class="form-inline my-2 my-lg-0 mr-lg-2">
                             <div class="input-group">
-                                <input class="form-control" type="text" id="axtaris" placeholder="Axtar...">
+                                <input class="form-control" type="text" id="myInput" placeholder="Axtar...">
                                 <span class="input-group-append">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fa fa-search"></i>
@@ -453,70 +465,91 @@
     }<!-- Navigation-->
 
 
-    <div class="content-wrapper">
-        <div class="container-fluid">
-            <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-                @*<li class="breadcrumb-item">
-                        <a href="#">Dashboard</a>
-                    </li>*@
-                @*<li class="breadcrumb-item active">My Dashboard</li>*@
-            </ol>
-            <!-- Icon Cards-->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    @*<li class="breadcrumb-item">
+                    <a href="#">Dashboard</a>
+                </li>*@
+                    @*<li class="breadcrumb-item active">My Dashboard</li>*@
+                </ol>
+                <!-- Icon Cards-->
 
-        </div>
-
-        <!-- /.container-fluid-->
-        <!-- /.content-wrapper-->
-        @RenderBody()
-
-
-
-        <footer class="sticky-footer">
-            <div class="container">
-                <div class="text-center">
-                    <small>2018 Butun Huquqlar Qorunur ...</small>
-                </div>
             </div>
-        </footer>
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fa fa-angle-up"></i>
-        </a>
-        <!-- Logout Modal-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cixis penceresi</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Cixmaq istediyinize eminsiniz ?</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Geri</button>
 
-                        <a class="btn btn-primary" href="~/UserLogin/Logout">Cixis</a>
+            <!-- /.container-fluid-->
+            <!-- /.content-wrapper-->
+            @RenderBody()
+
+
+
+            <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <small>2018 Butun Huquqlar Qorunur ...</small>
                     </div>
                 </div>
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cixis penceresi</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Cixmaq istediyinize eminsiniz ?</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Geri</button>
+
+                            <a class="btn btn-primary" href="~/UserLogin/Logout">Cixis</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Bootstrap core JavaScript-->
+            <script src="~/AdminPanel/vendor/jquery/jquery.min.js"></script>
+            <script src="~/AdminPanel/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="~/AdminPanel/vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Page level plugin JavaScript-->
+            <script src="~/AdminPanel/vendor/chart.js/Chart.min.js"></script>
+            <script src="~/AdminPanel/vendor/datatables/jquery.dataTables.js"></script>
+            <script src="~/AdminPanel/vendor/datatables/dataTables.bootstrap4.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="~/AdminPanel/js/sb-admin.min.js"></script>
+            <!-- Custom scripts for this page-->
+            <script src="~/AdminPanel/js/sb-admin-datatables.min.js"></script>
+            <script src="~/AdminPanel/js/sb-admin-charts.min.js"></script>
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js"
+                    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                    crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <script>
+
+
+                $(document).ready(function () {
+                    $("#myInput").on("keyup", function () {
+                        var value = $(this).val().toLowerCase();
+                        $("#myTable tr").filter(function () {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+                });
+            </script>
+
         </div>
-        <!-- Bootstrap core JavaScript-->
-        <script src="~/AdminPanel/vendor/jquery/jquery.min.js"></script>
-        <script src="~/AdminPanel/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Core plugin JavaScript-->
-        <script src="~/AdminPanel/vendor/jquery-easing/jquery.easing.min.js"></script>
-        <!-- Page level plugin JavaScript-->
-        <script src="~/AdminPanel/vendor/chart.js/Chart.min.js"></script>
-        <script src="~/AdminPanel/vendor/datatables/jquery.dataTables.js"></script>
-        <script src="~/AdminPanel/vendor/datatables/dataTables.bootstrap4.js"></script>
-        <!-- Custom scripts for all pages-->
-        <script src="~/AdminPanel/js/sb-admin.min.js"></script>
-        <!-- Custom scripts for this page-->
-        <script src="~/AdminPanel/js/sb-admin-datatables.min.js"></script>
-        <script src="~/AdminPanel/js/sb-admin-charts.min.js"></script>
-    </div>
 </body>
 
 </html>

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<PanelWork.Models.Sifari>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">ŞİKAYƏT OLUNAN</h2>
+<h3 class="text-left">Sifariş Sayı  : @Model.Where(s => s.sifaris_novu_id == 2).Count()</h3>
+<p>
+    @Html.ActionLink("ƏLAVƏ ET", "Create")
+</p>
+
+
+
+<form action="/Sifarisler/IndexErrDelete" method="post" id="form1">
+    <input type="submit" class="btn btn-danger" value="Sil" onclick="return confirm('Eminsiniz?')" />
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="checkBoxAll" />
+                </th>
+                <th>
+                    Ad,Soyad
+                </th>
+                <th>
+                    Telefon
+                </th>
+                <th>
+                    Mehsul
+                </th>
+              <th>
+                  Tarix
+              </th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody id="myTable">
+            @foreach (var item in Model)
+            {
+
+                using (Html.BeginForm("Join", "Home", FormMethod.Post))
+                {
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="productId" class="chkcheckBoxId" value="@item.sifaris_id" form="form1" />
+                </td>
+                <td>
+                    <a href="~/Sifarisler/Edit/@item.sifaris_id" class="xett" data-toggle="tooltip" title="@item.sifaris_qeyd">@item.sifarisci_ad_soyad</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sifarisci_telefon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sifarisci_unvani)
+
+                </td>
+                <td>
+                    @item.sifaris_tarixi 
+                </td>
+          
+                <td>
+                    <a class="btn btn-primary" href="/Home/Join/@item.sifaris_id">Təsdiqlə</a><br />
+                    @Html.ActionLink("Düzəlt", "Edit", new { id = item.sifaris_id }) |
+                    @Html.ActionLink("Bax", "Details", new { id = item.sifaris_id })
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.sifaris_id })*@
+                </td>
+            </tr>
+                }
+            }
+        </tbody>
+    </table>
+</form>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#checkBoxAll").click(function () {
+            if ($(this).is(":checked"))
+                $('.chkcheckBoxId').prop('checked', true);
+            else
+                $('.chkcheckBoxId').prop('checked', false);
+
+
+        });
+    });
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+</script>

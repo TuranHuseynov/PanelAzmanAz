@@ -25,6 +25,7 @@ namespace PanelWork.Models
         public string mehsulun_linki { get; set; }
         public string mehsulun_sekli { get; set; }
         public string mehsul_qiymeti { get; set; }
+        public Nullable<int> mehsul_price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sifari> Sifaris { get; set; }

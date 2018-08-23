@@ -25,6 +25,7 @@ namespace PanelWork.Models
         public Nullable<System.DateTime> sifaris_erteleme_tarix { get; set; }
         public Nullable<int> sifaris_goturen_id { get; set; }
         public string sifaris_mehsul_adi { get; set; }
+        public string sifaris_qeyd { get; set; }
     
         public virtual Istifadeci Istifadeci { get; set; }
         public virtual Mehsul Mehsul { get; set; }

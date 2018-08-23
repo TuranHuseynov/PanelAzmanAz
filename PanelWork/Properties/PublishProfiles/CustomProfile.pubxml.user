@@ -11,10 +11,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminPanel/css/sb-admin.css">
-      <publishTime>07/02/2018 12:58:12</publishTime>
+      <publishTime>07/22/2018 15:28:44</publishTime>
     </File>
     <File Include="AdminPanel/css/sb-admin.min.css">
-      <publishTime>07/03/2018 17:00:30</publishTime>
+      <publishTime>07/23/2018 12:10:21</publishTime>
     </File>
     <File Include="AdminPanel/js/sb-admin-charts.js">
       <publishTime>01/30/2018 07:10:55</publishTime>
@@ -137,7 +137,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/30/2018 07:10:55</publishTime>
     </File>
     <File Include="AdminPanel/vendor/bootstrap/css/bootstrap.css">
-      <publishTime>01/30/2018 07:10:55</publishTime>
+      <publishTime>07/23/2018 12:09:46</publishTime>
     </File>
     <File Include="AdminPanel/vendor/bootstrap/css/bootstrap.css.map">
       <publishTime>01/30/2018 07:10:55</publishTime>
@@ -383,10 +383,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2014 21:33:56</publishTime>
     </File>
     <File Include="bin/PanelWork.dll">
-      <publishTime>07/18/2018 10:49:29</publishTime>
+      <publishTime>08/15/2018 11:07:59</publishTime>
     </File>
     <File Include="bin/PanelWork.pdb">
-      <publishTime>07/18/2018 10:49:29</publishTime>
+      <publishTime>08/15/2018 11:07:59</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>04/13/2017 15:47:48</publishTime>
@@ -568,6 +568,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Models/PanelModel.edmx.diagram">
       <publishTime>07/15/2018 20:34:15</publishTime>
     </File>
+    <File Include="MyUpload/18238132_1684034811901074_5679194996975359480_o.jpg">
+      <publishTime>07/27/2018 11:50:18</publishTime>
+    </File>
+    <File Include="MyUpload/1897966_246785055506247_2061557988_n.jpg">
+      <publishTime>07/21/2018 12:23:10</publishTime>
+    </File>
+    <File Include="MyUpload/35893194_2004049869666441_3379412252837806080_n.jpg">
+      <publishTime>07/22/2018 14:40:33</publishTime>
+    </File>
+    <File Include="MyUpload/37627929_915219155329497_2317095905133592576_n.jpg">
+      <publishTime>07/22/2018 14:37:53</publishTime>
+    </File>
+    <File Include="MyUpload/37684803_915219148662831_1111507157901115392_n.jpg">
+      <publishTime>07/22/2018 14:36:10</publishTime>
+    </File>
+    <File Include="MyUpload/39056441_1784943108280294_5150104222460542976_n.jpg">
+      <publishTime>08/15/2018 11:05:57</publishTime>
+    </File>
     <File Include="MyUpload/78cc836315968804d25b5a51b14bee0d.jpg">
       <publishTime>07/02/2018 14:55:22</publishTime>
     </File>
@@ -589,6 +607,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="MyUpload/orxanadmin.jpg">
       <publishTime>07/10/2018 15:38:18</publishTime>
     </File>
+    <File Include="MyUpload/pexels-photo-356040.jpeg">
+      <publishTime>07/19/2018 14:36:37</publishTime>
+    </File>
     <File Include="MyUpload/prod.png">
       <publishTime>07/16/2018 02:57:29</publishTime>
     </File>
@@ -602,7 +623,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2018 02:36:45</publishTime>
     </File>
     <File Include="MyUpload/yenimacun.jpg">
-      <publishTime>07/04/2018 17:36:14</publishTime>
+      <publishTime>07/19/2018 14:38:05</publishTime>
     </File>
     <File Include="Rotativa/help-wkhtmltoimage.txt">
       <publishTime>07/16/2018 01:47:33</publishTime>
@@ -620,10 +641,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/17/2018 16:00:14</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>07/18/2018 10:43:18</publishTime>
+      <publishTime>08/01/2018 12:40:16</publishTime>
     </File>
     <File Include="Views/Home/ViewSifaris.cshtml">
-      <publishTime>07/17/2018 15:15:56</publishTime>
+      <publishTime>07/19/2018 13:31:57</publishTime>
     </File>
     <File Include="Views/Istifadeciler/Create.cshtml">
       <publishTime>07/15/2018 23:55:38</publishTime>
@@ -635,13 +656,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/15/2018 20:49:28</publishTime>
     </File>
     <File Include="Views/Istifadeciler/Edit.cshtml">
-      <publishTime>07/16/2018 01:15:16</publishTime>
+      <publishTime>07/19/2018 14:47:32</publishTime>
     </File>
     <File Include="Views/Istifadeciler/Index.cshtml">
-      <publishTime>07/15/2018 23:48:53</publishTime>
+      <publishTime>07/21/2018 12:32:39</publishTime>
     </File>
     <File Include="Views/Mehsullar/Create.cshtml">
-      <publishTime>07/16/2018 02:47:03</publishTime>
+      <publishTime>07/23/2018 14:19:23</publishTime>
     </File>
     <File Include="Views/Mehsullar/Delete.cshtml">
       <publishTime>07/16/2018 02:11:05</publishTime>
@@ -650,13 +671,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2018 02:11:05</publishTime>
     </File>
     <File Include="Views/Mehsullar/Edit.cshtml">
-      <publishTime>07/16/2018 02:15:27</publishTime>
+      <publishTime>07/23/2018 14:21:42</publishTime>
     </File>
     <File Include="Views/Mehsullar/Index.cshtml">
-      <publishTime>07/16/2018 02:59:51</publishTime>
+      <publishTime>07/23/2018 14:21:58</publishTime>
     </File>
     <File Include="Views/Profile/Index.cshtml">
-      <publishTime>07/16/2018 00:04:11</publishTime>
+      <publishTime>07/22/2018 15:05:16</publishTime>
     </File>
     <File Include="Views/Rollar/Create.cshtml">
       <publishTime>07/16/2018 00:04:55</publishTime>
@@ -676,11 +697,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/15/2018 20:08:49</publishTime>
     </File>
+    <File Include="Views/Shared/FilterPartial.cshtml">
+      <publishTime>07/31/2018 13:25:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_FilterPartial.cshtml">
+      <publishTime>08/01/2018 12:02:47</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>07/17/2018 15:19:06</publishTime>
+      <publishTime>08/01/2018 12:27:14</publishTime>
     </File>
     <File Include="Views/SifarisBolgusu/IndexCavabVer.cshtml">
-      <publishTime>07/18/2018 10:44:21</publishTime>
+      <publishTime>07/19/2018 13:19:58</publishTime>
     </File>
     <File Include="Views/SifarisBolgusu/IndexErr.cshtml">
       <publishTime>07/18/2018 10:44:03</publishTime>
@@ -701,7 +728,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/18/2018 10:46:14</publishTime>
     </File>
     <File Include="Views/SifarisBolgusu/IndexTestiq.cshtml">
-      <publishTime>07/18/2018 10:45:31</publishTime>
+      <publishTime>07/19/2018 13:28:38</publishTime>
     </File>
     <File Include="Views/SifarisBolgusu/IndexYeni.cshtml">
       <publishTime>07/18/2018 10:47:31</publishTime>
@@ -710,19 +737,46 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/18/2018 10:44:39</publishTime>
     </File>
     <File Include="Views/Sifarisler/Create.cshtml">
-      <publishTime>07/18/2018 10:33:19</publishTime>
+      <publishTime>07/23/2018 10:46:36</publishTime>
     </File>
     <File Include="Views/Sifarisler/Delete.cshtml">
       <publishTime>07/16/2018 00:09:15</publishTime>
     </File>
     <File Include="Views/Sifarisler/Details.cshtml">
-      <publishTime>07/16/2018 11:21:43</publishTime>
+      <publishTime>07/23/2018 10:46:27</publishTime>
     </File>
     <File Include="Views/Sifarisler/Edit.cshtml">
-      <publishTime>07/18/2018 10:34:43</publishTime>
+      <publishTime>07/23/2018 11:53:52</publishTime>
     </File>
     <File Include="Views/Sifarisler/Index.cshtml">
-      <publishTime>07/18/2018 10:33:18</publishTime>
+      <publishTime>08/01/2018 12:28:49</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexCavabverilmeyen.cshtml">
+      <publishTime>08/02/2018 15:26:45</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexErr.cshtml">
+      <publishTime>08/02/2018 15:26:25</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexFake.cshtml">
+      <publishTime>08/02/2018 15:27:22</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexImtina.cshtml">
+      <publishTime>08/02/2018 15:27:00</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexSilinen.cshtml">
+      <publishTime>08/02/2018 15:27:51</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexSonraya.cshtml">
+      <publishTime>08/02/2018 15:27:12</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexTecili.cshtml">
+      <publishTime>08/02/2018 15:26:34</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexTekrar.cshtml">
+      <publishTime>08/02/2018 15:27:41</publishTime>
+    </File>
+    <File Include="Views/Sifarisler/IndexTestiq.cshtml">
+      <publishTime>08/02/2018 15:27:31</publishTime>
     </File>
     <File Include="Views/SifarisNovleri/Create.cshtml">
       <publishTime>07/16/2018 00:06:41</publishTime>
@@ -740,7 +794,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/16/2018 00:07:49</publishTime>
     </File>
     <File Include="Views/UserLogin/Index.cshtml">
-      <publishTime>07/15/2018 20:48:56</publishTime>
+      <publishTime>07/22/2018 15:11:03</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>07/15/2018 20:08:49</publishTime>

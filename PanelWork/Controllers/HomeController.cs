@@ -18,6 +18,7 @@ namespace PanelWork.Controllers
         public ActionResult Index()
         {
             vm._sifarisler = db.Sifaris.ToList();
+            
             vm._sifarisler = (from s in db.Sifaris
                               orderby s.sifaris_id descending
                               select s).ToList();
@@ -77,13 +78,21 @@ namespace PanelWork.Controllers
             db.SaveChanges();
 
 
-
-
-
-
             return Redirect("/Home/Index");
 
         }
+
+      
+
+
+
+
+
+
+
+
+
+
 
         public ActionResult Exported()
         {
@@ -99,5 +108,21 @@ namespace PanelWork.Controllers
             };
 
         }
+
+
+
+        public ActionResult AjaxResult(string search)
+        {
+
+            vm._sifarisler = db.Sifaris.Where(m => m.sifarisci_ad_soyad.Contains(search) || m.sifarisci_telefon.Contains(search)).ToList();
+      
+            return PartialView("_FilterPartial",vm);
+        }
+
+
+
+
+
+
     }
 }
